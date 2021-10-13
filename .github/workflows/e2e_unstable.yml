@@ -10,6 +10,6 @@ jobs:
   tag-unstable:
     uses: hpi-schul-cloud/end-to-end-fork/.github/workflows/e2e.yml@main #ToDo remove branch ref
     with:
-      branch_name: ${{GITHUB_REF#refs/*/}}
+      branch_name: ${{ github.head_ref }}
       e2e_tag: hello
 
