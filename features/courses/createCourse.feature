@@ -5,7 +5,7 @@ Feature: Set of tests to create courses
         Given user arrives on the Schul-Cloud homepage
 
 
-    @createCourseCorrectly @e2eCore
+    @createCourseCorrectly @e2eCore @hello
     Scenario Outline: As a user, I want to be able to submit compulsory fields by creating the course
         Given <userRole> logs in with email '<userName>' and password '<password>'
         And <userRole> goes to courses page
