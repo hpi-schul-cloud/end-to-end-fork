@@ -9,9 +9,6 @@ on:
       e2e_tag:
         required: true
         type: string
-      ref:
-        required: true
-        type: string
 
 jobs:
   e2e:
@@ -19,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: ${{ inputs.ref }}
+          ref: ${{ inputs.branch_name }}
       - name: Set BRANCH_NAME on push
         run: |
           echo "BRANCH_NAME=${{ inputs.branch_name }}" >> $GITHUB_ENV
